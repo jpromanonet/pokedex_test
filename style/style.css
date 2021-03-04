@@ -1,25 +1,74 @@
-@import 'url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic)';
+﻿
+* {
+    font-family: 'DotGothic16', sans-serif;
+    box-sizing: border-box;
+}
 body {
-    margin: 0;
-    background-color :#39436A;
+    margin: 0 0 80px 0;
+    background-color :#fafafa;
     user-select: none;
     /*background-color :#FBC02D;*/
 
 }
-
-h1{
-    font-family: Montserrat, sans-serif;
-    text-align: center;
-    color: white;
+header, footer{
+    width: 100%;
+    border: #C83946 solid 10px;
+    background-color: #fafafa;
+    z-index: 2;
 }
+header{
+    border-radius: 0 0 50px 50px;
+}
+header *{
+    display: inline-block;
+    vertical-align: bottom;
+}
+header p{
+    font-family: 'DotGothic16', monospace;
+    font-size: 20px;
+    vertical-align: baseline;
+}
+header h1{
+    margin-bottom: 0;
+}
+.img-header{
+    width: 150px;
+    height: auto;
+    transform: translate(0px, 20px);
+}
+header span{
+    margin: 0 15% 0 15%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer {
+    border-radius: 50px 50px 0 0;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    height: 80px;
+}
+footer a img{
+    height: 20px;
+    width: auto;
+}
+footer span{
+    color: #C83946;
+}
+footer a:hover {
+    color: #2cbe48;
+    transition-duration: .6s;
+}
+
 
 /* Pokémon List ---------------------------------------------------------- */
 .list-pokemon{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color :#39436A
-
+    background-color: #f6b5b5;
+    padding-top: 8px;
 }
 
 .list-item-pokemon {
@@ -27,17 +76,17 @@ h1{
     color: black;
     padding: 20px;
     margin: 20px;
-    font-family: Montserrat, sans-serif;
     text-transform: capitalize;
     border-radius: 5px;
-    width: 200px;
+    width: 25%;
     height: 200px;
     text-align: center;
-    cursor: pointer;
+    cursor: url("../img/favicon.ico");
     box-shadow: 5px 5px 15px #0c092977;
     transition: all .3s;
     background: #ecf0f1;
-
+    border: #7f7f7f solid 1px;
+    border-radius: 5px;
 }
 
 .list-item-pokemon:hover{
@@ -73,13 +122,14 @@ h1{
     position: absolute;
     margin : 0 auto;
     margin : auto 0;
-
+    font-size: 1.5em;
 }
 
 /* Pokémon Name ---------------------------------------------------------- */
 
 .list-item-pokemon .pokename {
     position: absolute;
+    font-size: 1.2em;
 }
 
 .pokeinfo{
@@ -223,26 +273,37 @@ h1{
 
 .formSearch{
     text-align: center;
-
+    margin: 25px auto;
 }
 .formDisplay{
     text-align: center;
 }
-
 .input{
-    padding :10px;
-    margin: 10px 0 0 0;
     border-radius: 5px;
     font-size: 14px;
     outline: none;
-
-
+    border: #7f7f7f solid 5px;
+    padding: 1px 6px;
+    margin-right: 8px;
+    margin-top: 1px;
+    border-radius: 5px;
+    height: 55px;
+    width: 40%;
+    font-size: 20px;
+    color: #4A80E9;
 }
-
+.input, .input::placeholder, footer a{
+    color: #4A80E9;
+}
+.input:focus {
+    outline: none;
+}
+.input:active, .input:focus{
+    border: #2cbe48 solid 5px;
+}
 .submit{
     font-family: Montserrat, sans-serif;
     color: white;
-    background-color: rgba(183, 28, 28, 0.267);
     cursor: pointer;
     position: relative;
     padding: 20px;
@@ -253,156 +314,123 @@ h1{
     font-size : 15px;
 }
 .submitfirst{
-    font-family: Montserrat, sans-serif;
-    color: white;
-    background-color: rgb(177, 8, 8);
     cursor: pointer;
     position: relative;
     padding: 10px;
-    border-radius: 5px;
+    border: #4A80E9 solid 5px;
+    border-radius: 5px 50px 5px 5px;
+    background-color: #CEDCF8;
+    height: 55px;
+    width: 15%;
     outline: none;
- 
+    background-image: url('../img/search1.png');
+    background-repeat: no-repeat;
+    background-position: 45%;
+    background-size: 35px;
+    transition-duration: all .6s;
+    vertical-align: bottom;
 }
 
 .submitfirst:hover{
-    background-color: rgba(177, 8, 8, 0.836)
+    background-color: #bdebc6;
+    border-color: #2cbe48;
+    background-image: url('../img/search2.png');
+    transition-duration: .6s;}
+
+/* ---------------  FRAN ------------ */
+/*
+* {
+    box-sizing: border-box;
+    font-family: 'DotGothic16', monospace;
 }
-
-
-
-/* Divs por tipo */
-.type{
-    border-style: solid;
-    border-width: 2.5px;
-    border-radius: 5px;
-    color: #fafafa;
-    font-family: 'DotGothic16', sans-serif;
+body{
+    background-color: #fafafa;
+}
+h2{
+    font-size: 1.8em;
+}
+.container {
+    width: 70%;
+}
+header p{
+    font-family: 'DotGothic16', monospace;
+    font-size: 20px;
+    vertical-align: baseline;
+}
+header, footer{
+    width: 100%;
+    border: #C83946 solid 10px;
+    background-color: #fafafa;
+}
+header {
+    border-radius: 0 0 50px 50px;
+}
+footer {
+    border-radius: 50px 50px 0 0;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    
+}
+footer a img{
+    height: 20px;
+    width: auto;
+}
+header *{
     display: inline-block;
-    padding: 2px 2px 4px 2px;
+    vertical-align: baseline;
 }
-.type-1{
-    border-color: #A8A878;
-    background-color: #A8A878;
+header h1{
+    margin-bottom: 0;
 }
-.type-1::before{
-    content: "normal";
+.img-header{
+    width: 150px;
+    height: auto;
+    transform: translate(0px, 20px);
 }
-.type-2{
-    border-color: #C03028;
-    background-color: #C03028;
+header span{
+    margin: 0 15% 0 15%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.type-2::before{
-    content: "fighting";
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 
 }
-.type-3{
-    border-color: #A890F0;
-    background-color: #A890F0;
+
+#card{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
-.type-3::before{
-    content: "flying";
+#title{
+    margin: 0 1em; 
 }
-.type-4{
-    border-color: #A040A0;
-    background-color: #A040A0;
+#card-container{
+    display: flex;
+    flex-direction: row;
 }
-.type-4::before{
-    content: "poison";
+#img-container{
+    border: #7f7f7f solid 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
-.type-5{
-    border-color: #E0C068;
-    background-color: #e0c068;
+#img-container img{
+    width: 200px;
+    height: auto;
 }
-.type-5::before{
-    content: "ground";
+#data-container{
+    display: flex;
+    align-items: flex-end;
 }
-.type-6{
-    border-color: #B8A038;
-    background-color: #B8A038;
+#data-container-col1, #data-container-col2, #data-container-col3{
+    margin: 0.75em;
 }
-.type-6::before{
-    content: "rock";
+#data-container-col1{
+    margin-left: 3em;
 }
-.type-7{
-    border-color: #A8B820;
-    background-color: #A8B820;
-}
-.type-7::before{
-    content: "bug";
-}
-.type-8{
-    border-color: #705898;
-    background-color: #705898;
-}
-.type-8::before{
-    content: "ghost";
-}
-.type-9{
-    border-color: #B8B8D0;
-    background-color: #B8B8D0;
-}
-.type-9::before{
-    content: "steel";
-}
-.type-10{
-    border-color: #F08030;
-    background-color: #F08030;
-}
-.type-10::before{
-    content: "fire";
-}
-.type-11{
-    border-color: #6890F0;
-    background-color: #6890F0;
-}
-.type-11::before{
-    content: "water";
-}
-.type-12{
-    border-color: #78C850;
-    background-color: #78C850;
-}
-.type-12::before{
-    content: "grass";
-}
-.type-13{
-    border-color: #F8D030;
-    background-color: #F8D030;
-}
-.type-13::before{
-    content: "electric";
-}
-.type-14{
-    border-color: #F85888;
-    background-color: #F85888;
-}
-.type-14::before{
-    content: "psychic";
-}
-.type-15{
-    border-color: #98D8D8;
-    background-color: #98D8D8;
-}
-.type-15::before{
-    content: "ice";
-}
-.type-16{
-    border-color: #7038F8;
-    background-color: #7038F8;
-}
-.type-16::before{
-    content: "dragon";
-}
-.type-17{
-    border-color: #705848;
-    background-color: #705848;
-}
-.type-17::before{
-    content: "dark";
-}
-.type-18{
-    border-color: #F0B6BC;
-    background-color: #F0B6BC;
-}
-.type-18::before{
-    content: "fairy";
-}
+
+*/

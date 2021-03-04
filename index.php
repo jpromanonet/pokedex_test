@@ -1,6 +1,7 @@
 <?php
     include('url.php');
     include('getInfo.php');
+    include('footer.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,14 +11,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pokédex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style/style.css">
+    <link rel="icon" type="image/png" href="fav-ic/pokeball.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="fav-ic/pokeball.png" />
 </head>
 <body>
-    <h1>Pokedex</h1>
+<?php include('header.php'); ?>
     <form class="formSearch"action="" method="get">
         <input id="search-form" class ="input" type="text" name="pokemon" placeholder="Search any Pokemon">
-        <input id="search-btn" class ="submitfirst" value="Search" type="submit">
+        <input id="search-btn" class ="submitfirst" value="" type="submit">
     </form>
     <div id="result">
     
@@ -49,7 +54,7 @@
                 <p class="pokeweight"><strong>Weight : </strong><?= pokemonWeight($_pokemon->name, 4, 1)?>Kg</p>
                 <p class = "shinyform">Shiny <?= $_pokemon->name ?></p>
             </div>
-        <?php endforeach; ?>**/
+        <?php endforeach; ?>
 
         <!-- Pokémon Pannel Search ----------------------------------------------- -->
         <?php if(!empty($_GET['pokemon'])): ?>
@@ -83,4 +88,6 @@
     </div>
     <script src="main.js"></script>
 </body>
+<?php include('footer.php');?>
+
 </html>

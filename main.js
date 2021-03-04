@@ -3,6 +3,9 @@
 //                  {nombre: "ARIEL", puesto: "secretario"},
 //                 ]// ACA DEBO TRAER EL JSON DE LA API QUE TENEMOS EN EL MODELO
 
+
+/* Comento porque da un error de referencia linea 12 -> pokemons */
+/*
 const form = document.querySelector("#search-form");
 const button = document.querySelector("#search-btn");
 const result = document.querySelector("#result");
@@ -48,7 +51,7 @@ const filter = () => {
         "?>Kg</p>" +
         "<p class = 'shinyform'>Shiny <?=" +
         $searchedPokemon +
-        "?></p>";
+        "?></p>"; // REVISAR NO MUESTRA EL DATO
     }
   }
   if (result.innerHTML === "") {
@@ -60,3 +63,4 @@ button.addEventListener("click", filter);
 form.addEventListener("keyup", filter);
 
 filter();
+*/
