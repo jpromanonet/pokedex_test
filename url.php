@@ -15,6 +15,7 @@
         // Cache info
         $cacheKey = md5($url);
         $cachePath = './cache/'.$cacheKey;
+        $cacheNames = './pokeList/'.$cacheKey;
         $cacheUsed = false;
 
         // Cache available
@@ -40,6 +41,7 @@
 
             // Save in cache
             file_put_contents($cachePath, $results[$index]);
+            file_put_contents($cacheNames, $results[$index]);
         }
 
         // Decode JSON
