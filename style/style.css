@@ -1,0 +1,408 @@
+@import 'url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic)';
+body {
+    margin: 0;
+    background-color :#39436A;
+    user-select: none;
+    /*background-color :#FBC02D;*/
+
+}
+
+h1{
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+/* Pokémon List ---------------------------------------------------------- */
+.list-pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color :#39436A
+
+}
+
+.list-item-pokemon {
+    align-items: center;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    font-family: Montserrat, sans-serif;
+    text-transform: capitalize;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px #0c092977;
+    transition: all .3s;
+    background: #ecf0f1;
+
+}
+
+.list-item-pokemon:hover{
+
+    transform: scale(1.05);
+}
+
+/* Pokémon Sprite ---------------------------------------------------------- */
+
+.list-item-pokemon .sprites-container {
+    position: relative;
+    width: 96px;
+    height: 96px;
+
+}
+.list-item-pokemon .sprite {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+}
+
+/* Pokémon Type ---------------------------------------------------------- */
+
+.list-item-pokemon .poketype{
+    position: relative;
+    display: flex;
+    bottom : -40px;
+}
+
+/* Pokémon ID ---------------------------------------------------------- */
+
+.list-item-pokemon .pokeid {
+    position: absolute;
+    margin : 0 auto;
+    margin : auto 0;
+
+}
+
+/* Pokémon Name ---------------------------------------------------------- */
+
+.list-item-pokemon .pokename {
+    position: absolute;
+}
+
+.pokeinfo{
+    display: none;
+    position: fixed;
+    background-color: #B71C1C;
+    width: 800px;
+    height: 750px;
+    border-radius: 3px;
+    opacity: 0.95;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 15px #130f40a9;
+}
+
+.pokeinfo h2{
+    font-family: Montserrat, sans-serif;
+    color: white;
+    position: absolute;
+    top: 10px;
+}
+
+.pokeinfoname{
+    font-family: Montserrat, sans-serif;
+    color: white;
+    position: absolute;
+    text-transform: capitalize;
+    top: 60px;
+    font-size: 20px;
+}
+
+.close-button{
+    font-family: Montserrat, sans-serif;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom : 20px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 2px;
+ 
+}
+
+.close-button2{
+    font-family: Montserrat, sans-serif;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom : 20px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 2px;
+ 
+}
+
+.close-button:hover, .close-button2:hover, .submit:hover{
+    background-color: rgba(255, 255, 255, 0.123);
+}
+
+.pokeinfo .pokeinfotype{
+    color: white;
+    top: 400px;
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    left: 20px;
+    text-transform: capitalize;
+
+}
+
+.pokeinfo .pokeinfoabilities{
+    color: white;
+    top: 350px;
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    left: 20px;
+    text-transform: capitalize;
+
+
+}
+
+.pokeinfo .pokeheight{
+    color: white;
+    top: 450px;
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    left: 20px;
+}
+
+.pokeinfo .pokeweight{
+    color: white;
+    top: 500px;
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    left: 20px;
+}
+
+
+.infosprite{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top : 80px;
+    left: 100px;
+
+}
+
+.infosprite2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top : 80px;
+    right: 100px;
+
+}
+
+.shinyform{
+    color: white;
+    top: 350px;
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    right: 200px; 
+    text-transform: capitalize;
+}
+
+.pokeinfodescription{
+    color: white;
+    top: 550px;
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    left: 20px;
+}
+
+.formSearch{
+    text-align: center;
+
+}
+.formDisplay{
+    text-align: center;
+}
+
+.input{
+    padding :10px;
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+
+
+}
+
+.submit{
+    font-family: Montserrat, sans-serif;
+    color: white;
+    background-color: rgba(183, 28, 28, 0.267);
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 2px; 
+    bottom : -300px;
+    outline: none;
+    font-size : 15px;
+}
+.submitfirst{
+    font-family: Montserrat, sans-serif;
+    color: white;
+    background-color: rgb(177, 8, 8);
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+ 
+}
+
+.submitfirst:hover{
+    background-color: rgba(177, 8, 8, 0.836)
+}
+
+
+
+/* Divs por tipo */
+.type{
+    border-style: solid;
+    border-width: 2.5px;
+    border-radius: 5px;
+    color: #fafafa;
+    font-family: 'DotGothic16', sans-serif;
+    display: inline-block;
+    padding: 2px 2px 4px 2px;
+}
+.type-1{
+    border-color: #A8A878;
+    background-color: #A8A878;
+}
+.type-1::before{
+    content: "normal";
+}
+.type-2{
+    border-color: #C03028;
+    background-color: #C03028;
+}
+.type-2::before{
+    content: "fighting";
+}
+.type-3{
+    border-color: #A890F0;
+    background-color: #A890F0;
+}
+.type-3::before{
+    content: "flying";
+}
+.type-4{
+    border-color: #A040A0;
+    background-color: #A040A0;
+}
+.type-4::before{
+    content: "poison";
+}
+.type-5{
+    border-color: #E0C068;
+    background-color: #e0c068;
+}
+.type-5::before{
+    content: "ground";
+}
+.type-6{
+    border-color: #B8A038;
+    background-color: #B8A038;
+}
+.type-6::before{
+    content: "rock";
+}
+.type-7{
+    border-color: #A8B820;
+    background-color: #A8B820;
+}
+.type-7::before{
+    content: "bug";
+}
+.type-8{
+    border-color: #705898;
+    background-color: #705898;
+}
+.type-8::before{
+    content: "ghost";
+}
+.type-9{
+    border-color: #B8B8D0;
+    background-color: #B8B8D0;
+}
+.type-9::before{
+    content: "steel";
+}
+.type-10{
+    border-color: #F08030;
+    background-color: #F08030;
+}
+.type-10::before{
+    content: "fire";
+}
+.type-11{
+    border-color: #6890F0;
+    background-color: #6890F0;
+}
+.type-11::before{
+    content: "water";
+}
+.type-12{
+    border-color: #78C850;
+    background-color: #78C850;
+}
+.type-12::before{
+    content: "grass";
+}
+.type-13{
+    border-color: #F8D030;
+    background-color: #F8D030;
+}
+.type-13::before{
+    content: "electric";
+}
+.type-14{
+    border-color: #F85888;
+    background-color: #F85888;
+}
+.type-14::before{
+    content: "psychic";
+}
+.type-15{
+    border-color: #98D8D8;
+    background-color: #98D8D8;
+}
+.type-15::before{
+    content: "ice";
+}
+.type-16{
+    border-color: #7038F8;
+    background-color: #7038F8;
+}
+.type-16::before{
+    content: "dragon";
+}
+.type-17{
+    border-color: #705848;
+    background-color: #705848;
+}
+.type-17::before{
+    content: "dark";
+}
+.type-18{
+    border-color: #F0B6BC;
+    background-color: #F0B6BC;
+}
+.type-18::before{
+    content: "fairy";
+}
