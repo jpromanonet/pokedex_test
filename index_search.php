@@ -1,7 +1,6 @@
 <?php
     include('url.php');
     include('getInfo.php');
-    include('footer.php');
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +85,7 @@
             </div>
         <?php endif;?>
     </div>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 <?php include('footer.php');?>
 
