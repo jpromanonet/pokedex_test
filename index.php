@@ -86,7 +86,7 @@
             </div>
         <?php endif;?>
     </div>
-    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 <?php include('footer.php');?>
 

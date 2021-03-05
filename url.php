@@ -60,7 +60,7 @@
     }
 
     // Function to get another URL to get other info (like pokémon description etc...)
-    function createInfoUrl($pokemonName, $index)
+    /*function createInfoUrl($pokemonName, $index)
     {
         global $results;
 
@@ -69,7 +69,7 @@
         createUrl($pokeInfoUrl, $index);
     }   
 
-    createUrl($generalUrl, 0);
+    createUrl($generalUrl, 0);*/
 
     // Searching pokemon 
 
