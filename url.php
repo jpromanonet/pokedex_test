@@ -78,6 +78,19 @@
         
     }
 
+    //Getting JSON file with names and ID for partial search
+    $url = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=898";
+    $json = file_get_contents($url);
+    $json_data = json_decode($json, true);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_URL, 'url_here');
+    $result = curl_exec($ch);
+    curl_close($ch);
+    $obj = json_decode($result);
+    echo $obj->access_token;
+
     // Display pokemon 
 
     // Error if the $searchedPokemon doesnt exist

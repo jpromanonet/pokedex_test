@@ -3603,17 +3603,18 @@ const filter = () => {
     let pokeName = poke.name.toLowerCase();
     if (pokeName.indexOf(txt) !== -1) {
       result.innerHTML +=
-        "<center>" +
-        "<a href=https://bulbapedia.bulbagarden.net/wiki/" +
+        "<div class='alert alert-primary my-2' role='alert'>" +
+        "Yo soy <a href=https://bulbapedia.bulbagarden.net/wiki/" +
         poke.name +
         "_(Pokémon) target='_blank'>" +
         poke.name +
-        "</a></br>" +
-        "</center>";
+        "</a>" +
+        "</div>";
     }
   }
   if (result.innerHTML === "") {
-    result.innerHTML += "<h3>NOT FOUND :(</h3>";
+    result.innerHTML +=
+      "<h3 class='alert alert-danger' role='alert'>NOT FOUND :(</h3>";
   }
 };
 
