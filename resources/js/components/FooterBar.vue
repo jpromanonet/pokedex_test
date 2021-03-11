@@ -3,8 +3,10 @@
   <footer class="bg-danger text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3 text-light">
-      © 2021 Pokedex 
-      <a class="text-light" href="https://github.com/baubyte">by BAUBYTE.</a>
+      © 2021 Pokedex
+      <a class="text-light" href="https://github.com/jpromanonet"
+        >by jpromanonet.</a
+      >
     </div>
     <!-- Copyright -->
   </footer>
